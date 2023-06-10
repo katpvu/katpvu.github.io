@@ -10,7 +10,7 @@ const ProjectsIndex = ({portfolioData}) => {
             <h1 className="header-title">PROJECTS</h1>
             <div id="projects-container">
             {projects && projects.map((project, i) => (
-                <div className="project-card">
+                <div className="project-card" key={i}>
                     <div className="project-card-img-container">
                         <img className="project-thumb" src={project.imgurl} alt={project.name} />
                     </div>
@@ -19,12 +19,19 @@ const ProjectsIndex = ({portfolioData}) => {
                         <p>{project.description}</p>
                         <div>
                             <h3>Techstack: {project.techStackSingleLine}</h3>
-                            
                             {/* <Skills portfolioData={portfolioData} techstack={project.techstack}/> */}
                         </div>
                         <div className="btns-container">
-                            <a href={project.liveLink} target="_blank" className="projects-btn">Live <BsBoxArrowUpRight /></a>
-                            <a href={project.sourceCode} target="_blank" className="projects-btn"><TfiGithub /> Source Code</a>
+                            <a href={project.liveLink} 
+                                target="_blank" 
+                                className="projects-btn"
+                                rel="noreferrer"
+                            >Live <BsBoxArrowUpRight /></a>
+                            <a href={project.sourceCode} 
+                                target="_blank" 
+                                className="projects-btn" 
+                                rel="noreferrer"
+                            ><TfiGithub /> Source Code</a>
                         </div>
                     </div>
                 </div>

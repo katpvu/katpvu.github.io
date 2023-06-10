@@ -4,7 +4,7 @@ import { HiOutlineMail, HiOutlineNewspaper } from "react-icons/hi";
 import { FaAngellist } from "react-icons/fa"
 
 export const Footer = ({portfolioData, nav=false, openNavPanel}) => {
-    const { socialLinks, aboutMe } = portfolioData;
+    const { socialLinks } = portfolioData;
     const icons = [<BsLinkedin/>, <BsGithub/>,  <HiOutlineMail/>, <FaAngellist />, <HiOutlineNewspaper />]
     return (
         <section id="contact">
@@ -12,7 +12,7 @@ export const Footer = ({portfolioData, nav=false, openNavPanel}) => {
             <div id="social-links-btns-container" className={nav ? "column" : "row"}>
             {socialLinks.map((social, i) => {
                 return (
-                <a href={social.url} target="_blank">
+                <a href={social.url} target="_blank" key={i} rel="noreferrer">
                     {icons[i]}<br></br>
                     {!nav && <p>{social.name}</p>}
                 </a>

@@ -1,11 +1,9 @@
-
-import { Link } from "react-router-dom";
 import "./AboutMe.css"
 import { BsArrowDown, BsArrowUp } from 'react-icons/bs'
 import { useState } from "react";
 
 const AboutMe = ({portfolioData}) => {
-    const { aboutMe, galleryImages } = portfolioData;
+    const { galleryImages } = portfolioData;
 
     const [openGallery, setOpenGallery] = useState(false);
 
@@ -23,7 +21,6 @@ const AboutMe = ({portfolioData}) => {
             <div>
                 <h1 className="header-title">About Me </h1>
                 <p>Hi there! I am a full-stack software engineer who finds thrill in designing and developing web applications from scratch. With a blend of creativity and technical expertise, <span style={{fontWeight: '600'}} >I thrive on the excitement of transforming ideas into functional and visually appealing websites.</span> I have a deep appreciation for the art of design, constantly seeking innovative ways to create user-friendly interfaces that enhance the overall user experience.</p>
-                {/* <p>{aboutMe.aboutme}</p> */}
             </div>
             
             
@@ -40,7 +37,7 @@ const AboutMe = ({portfolioData}) => {
             {openGallery &&
             <div id="gallery-container" className={openGallery ? "open-gallery" : ""}>
                 {galleryImages.map((image, i) => (
-                    <img src={image} alt="gallery-item" />
+                    <img key={i} src={image} alt="gallery-item" />
                 ))}
             </div>
             }

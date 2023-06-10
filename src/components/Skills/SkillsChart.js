@@ -7,7 +7,7 @@ export const SkillsChart = ({ portfolioData }) => {
         <h1 className="header-title">Skills</h1>
         <div id="skills-table">
             {categorizedSkills.map((item, i) => (
-                <div className="skills-table-row">
+                <div className="skills-table-row" key={i}>
                     <h6>{item.category}</h6>
                     <p>{item.skills}</p>
                 </div>
