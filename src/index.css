@@ -1,1 +1,113 @@
-/* TODO Add site-wide styles */
+/* TODO Add site wide styles */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Source+Code+Pro:wght@300;400;500;600;700;800&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Source Code Pro', monospace; */
+	line-height: 1;
+    background-color: rgba(228, 225, 218, 1);
+}
+
+body * {
+    /* border: 1px solid red; */
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.header {
+    font-family: 'Archivo', sans-serif;
+}
+
+.header-title {
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    font-family: 'Archivo', sans-serif;
+    text-transform: lowercase;
+}
+
+
+/* -------------------------------------------------- */
+/* -----------------Responsive Layout---------------- */
+/* -------------------------------------------------- */
+
+#root {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* .right {
+    position: absolute;
+    left: 400px;
+} */
+
+@media (max-width: 960px) {
+    #root {
+        flex-direction: column;
+    }
+
+    .right {
+        position: static;
+        left: 0;
+    }
+
+    .subheading {
+        text-align: center;
+      
+    }
+
+
+}
+
+@media (max-width: 750px) {
+    .header-title {
+        font-size: 12vw;
+        /* width: 100%; */
+    }
+}

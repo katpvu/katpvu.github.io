@@ -1,0 +1,102 @@
+#about {
+    margin-top: 40px;
+    min-height: 70vh;
+    height: auto;
+    width: 100%;
+}
+
+#about h1 {
+    display: inline-block;
+    margin-right: 150px;
+    padding-top: 70px;
+}
+
+.strong {
+    font-weight: 600;
+}
+#about p {
+    display: inline;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 0.015em;
+}
+
+#about h2 {
+    margin-top: 40px;
+    font-size: 22px;
+    margin-bottom: 90px;
+}
+
+#gallery-option-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#gallery-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#gallery-container {
+    /* width: 300px; */
+    /* height: 300px; */
+    /* height: 300px;  */
+    /* display: flex; */
+    margin-bottom: 90px;
+    /* overflow-x:scroll; */
+    /* transform: rotate(-90deg) ;
+  transform-origin: top right;
+  overflow-x: hidden;
+  overflow-y: auto; */
+  width: 400px;
+  height: calc(100vw - 160px);
+  transform: rotate(-90deg) translateY(-400px);
+  transform-origin: top right;
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+#gallery-container img {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    transform: rotate(90deg);
+    object-fit: cover;
+}
+
+
+
+@media (max-width: 840px) {
+    #about p {
+        font-size: 130%;
+    }
+
+    #about h2 {
+        font-size: 95%;
+    }
+
+
+}
+
+@media (max-width: 814px) {
+    #gallery-container {
+        height: calc(100vw - 60px);
+        overflow-y: scroll;
+        
+    }
+}

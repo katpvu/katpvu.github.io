@@ -1,7 +1,13 @@
-
+import Main from "./components/Main/Main";
+import portfolioData from "./portfolioData";
+import Navigation from "./components/Navigation/Navigation";
 function App() {
   return (
-    <h1>Hello from App</h1>
+    <>
+      <Main portfolioData={portfolioData} />
+      <Navigation portfolioData={portfolioData}/>
+
+    </>
   );
 }
 
