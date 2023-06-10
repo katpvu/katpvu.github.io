@@ -1,8 +1,10 @@
 
 import "./Skills.css"
+
 export const SkillsChart = ({ portfolioData }) => {
     const { categorizedSkills } = portfolioData;
-    return (<>
+
+    return (
     <section id="skills">
         <h1 className="header-title">Skills</h1>
         <div id="skills-table">
@@ -14,7 +16,7 @@ export const SkillsChart = ({ portfolioData }) => {
             ))}
         </div>
     </section>
-    </>);
+    );
 };
 
 export default SkillsChart;

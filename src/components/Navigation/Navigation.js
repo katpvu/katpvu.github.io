@@ -5,7 +5,7 @@ import { TfiClose } from 'react-icons/tfi'
 import Footer from "../Footer/Footer";
 import useWindowSize from "../../hooks/useWindowSize";
 
-export const Navigation = ({portfolioData}) => {
+export const Navigation = ({ portfolioData }) => {
     const [openNavPanel, setOpenNavPanel] = useState(false);
     const windowSize = useWindowSize();
 
@@ -15,30 +15,35 @@ export const Navigation = ({portfolioData}) => {
         };
     }, [windowSize]);
 
+    const generateNavListItems = (nav=false) => {
+        let links = ["about", "skills", "projects", "contact"];
+        if (nav) links.pop();
+        return (
+            links.map((link, i) => (
+                <li onClick={nav ? () => setOpenNavPanel(false) : () => true} key={i}>
+                    <a href={`#${link}`}>{link}</a>
+                </li>
+            ))
+        );
+    };
+
     return (
         <>
         <nav id="nav-bar-1">
             <ul>
                 <li id="initials"><a href="#home">kv.</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#contact">contact</a></li>
+                {generateNavListItems()}
             </ul>
             <Footer portfolioData={portfolioData} nav={true}/>
         </nav>
-        {openNavPanel ? 
-        <TfiClose id="close-nav-btn" onClick={() => setOpenNavPanel(false)}/>
-        :
-        <GiHamburgerMenu size={20} id="hamburger-button" onClick={() => setOpenNavPanel(true)}/>
+        {openNavPanel 
+        ? <TfiClose id="close-nav-btn" onClick={() => setOpenNavPanel(false)}/>
+        : <GiHamburgerMenu size={20} id="hamburger-button" onClick={() => setOpenNavPanel(true)}/>
         }
         <nav id="nav-bar-2" className={openNavPanel ? "open-nav" : "close-nav"}>
             <ul >
                 <li id="initials" onClick={() => setOpenNavPanel(false)}><a href="#home">kv.</a></li>
-                <li href="#about" onClick={() => setOpenNavPanel(false)}><a href="#about">about</a></li>
-                <li href="#skills" onClick={() => setOpenNavPanel(false)}><a href="#skills">skills</a></li>
-                <li href="#projects" onClick={() => setOpenNavPanel(false)}><a href="#projects">projects</a></li>
-                {/* <li href="#contact"onClick={() => setOpenNavPanel(false)}><a href="#about">contact</a></li> */}
+                {generateNavListItems(true)}
                 <Footer portfolioData={portfolioData} openNavPanel={openNavPanel}/>
             </ul>
         </nav>

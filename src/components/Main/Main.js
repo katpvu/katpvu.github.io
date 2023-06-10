@@ -4,10 +4,12 @@ import Landing from "../Landing/Landing";
 import ProjectsIndex from "../Projects/ProjectsIndex";
 import SkillsChart from "../Skills/SkillsChart";
 import Footer from "../Footer/Footer";
+import Navigation from "../Navigation/Navigation";
 
 const Main = ({portfolioData}) => {
     const { aboutMe } = portfolioData;
     return (
+        <>
         <div id="main-wrapper">
             <Landing portfolioData={portfolioData}/>
             <AboutMe portfolioData={portfolioData}/>
@@ -18,6 +20,8 @@ const Main = ({portfolioData}) => {
             </div>
             <Footer portfolioData={portfolioData}/>
         </div>
+        <Navigation portfolioData={portfolioData}/>
+        </>
     );
 };
 
