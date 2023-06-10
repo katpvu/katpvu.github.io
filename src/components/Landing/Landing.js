@@ -29,10 +29,6 @@ const Landing = ({portfolioData}) => {
                         <img src={aboutMe.landingImageUrl} />
                     </div>
                 </div>
-                <div className="full-flex-row">
-                    
-                </div>
-
             </div>
             {/* <Footer portfolioData={portfolioData}/> */}
         </section>

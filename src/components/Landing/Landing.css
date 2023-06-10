@@ -40,7 +40,7 @@
     width: 100%;
     /* justify-content: space-between; */
     align-items: flex-start;
-    border-bottom: 1px solid gray;
+    /* border-bottom: 1px solid gray; */
     padding-bottom: 30px;
 }
 @media (max-width: 1022px) {
