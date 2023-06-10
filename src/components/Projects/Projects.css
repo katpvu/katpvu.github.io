@@ -79,9 +79,9 @@
 
 .projects-btn:hover {
     /* color: rgb(236, 236, 228); */
-    color: rgb(30, 60, 196);
-    background-color: rgb(189, 218, 255);
-    border: 1px solid transparent
+    color: rgba(228, 225, 218, 1);
+    background-color: rgb(41, 40, 40);
+    border: 1px solid rgb(41, 40, 40);
 
 }
 

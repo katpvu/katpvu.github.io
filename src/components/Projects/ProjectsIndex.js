@@ -16,7 +16,7 @@ const ProjectsIndex = ({portfolioData}) => {
                     </div>
                     <div className="project-details">
                         <h2>0{i+1} {project.name}</h2>
-                        <p>{project.shortDescription}</p>
+                        <p>{project.description}</p>
                         <div>
                             <h3>Techstack: {project.techStackSingleLine}</h3>
                             

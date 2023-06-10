@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  color: rgb(20, 20, 20)
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -56,7 +57,7 @@ table {
 }
 
 a:link, a:visited {
-    color: black;
+    color: rgb(41, 40, 40);
     text-decoration: none;
 }
 
