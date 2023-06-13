@@ -54,7 +54,7 @@ let portfolioData = {
           "imgurl": "images/projects/bean-bunny-thumb.png",
           "techStackSingleLine": "Ruby on Rails, React/Redux, PostgreSQL",
           "techstack": ["rails", "ruby", "javascript", "react", "redux", "postgresql"],
-          "liveLink": "https://bean-bunny.onrender.com/",
+          "liveLink": "https://bean-bunny.herokuapp.com/",
           "sourceCode": "https://github.com/katpvu/bean-bunny",
           "additionalPhotos": ["images/projects/bean-bunny-1.png", "images/projects/bean-bunny-2.png", "images/projects/bean-bunny-3.png"],
           "giflink": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjQ1MTZjNTkxMTczODRlNmU3YmNiNDk2MTk5OGY4MWE2NDFlOTgwOCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/Ocm4em5gGjPYXxwuTE/giphy.gif"
