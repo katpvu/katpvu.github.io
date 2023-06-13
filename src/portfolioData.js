@@ -42,7 +42,7 @@ let portfolioData = {
         ,
         {
           "name": "resume",
-          "url": "",
+          "url": "https://drive.google.com/file/d/1VVeUoBDKYNgfdayha2MaAFxw-CYX0KZF/view?usp=sharing",
           "className": "resume"
         }
       ],
