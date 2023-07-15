@@ -1,6 +1,7 @@
 #about {
     margin-top: 40px;
     min-height: 70vh;
+    max-height: 140vh;
     height: auto;
     width: 100%;
 }
